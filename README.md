@@ -1,10 +1,10 @@
-# Desktop Image Optimization
+# Desktop Images Optimization
 
 #### Clone project
-`git clone git@github.com:DenisShapkun/optimize-images.git`
+`git clone git@github.com:DenisShapkun/images-optimization.git`
 
 #### Enter project
-`cd optimize-images`
+`cd images-optimization`
 
 #### Install packages
 `npm install`
