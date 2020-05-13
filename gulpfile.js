@@ -5,11 +5,10 @@ var gulp         = require('gulp'),
     del          = require('del'),
     cache        = require('gulp-cache');
 
-
 // Resize images
-// need to test
+// https://www.npmjs.com/package/gulp-image-resize
 gulp.task('resize', function () {
-  gulp.src('app/images/original/**/*')
+  return gulp.src('app/images/original/**/*')
     .pipe(imageResize({
       width: 1000,
       height: 1000,
@@ -18,7 +17,6 @@ gulp.task('resize', function () {
     }))
     .pipe(gulp.dest('app/images/resized'));
 });
-
 
 // Optimize images
 gulp.task('compress', function() {
@@ -37,19 +35,16 @@ gulp.task('compress', function() {
   .pipe(gulp.dest('dist/images'));
 });
 
-
 // Cleaning Production distributive
 gulp.task('clean', function(done) {
   del.sync('dist');
   done();
 });
 
-
 // Clear Cache
 gulp.task('clear', function() {
   return cache.clearAll();
 });
-
 
 // Build Production distributive with all updates
 gulp.task('default', gulp.series('clean', 'compress'));
