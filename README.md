@@ -1,5 +1,11 @@
 # Desktop Images Optimization
 
+Batch PNG, JPEG, GIF, SVG image optimization.
+
+PNG without alpha channel is better to convert to JPEG.
+
+Animated GIFs will cause an error.
+
 #### Clone project
 `git clone git@github.com:DenisShapkun/images-optimization.git`
 
