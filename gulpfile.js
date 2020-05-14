@@ -9,7 +9,7 @@ var gulp                   = require('gulp'),
 // Resize images
 // need to test
 gulp.task('resize', function () {
-  gulp.src('app/images/original/**/*')
+  return gulp.src('app/images/original/**/*')
     .pipe(imageResize({
       width: 1000,
       height: 1000,
